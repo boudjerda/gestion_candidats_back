@@ -1,10 +1,15 @@
+const url = "postgres://nynokspbxqgadj:45a184395e084e52ea9c5ffcdc47";
+
+// Extraction des informations de l'URL PostgreSQL
+const [dialect, credentials, host, port, db] = url.match(/(\w+):\/\/(\w+):(\w+)@([\w.-]+):(\d+)\/(\w+)/);
+
 module.exports = {
-  HOST: "localhost",
-  USER: "postgres",
-  PASSWORD: "postgres",
-  PORT:5433,
-  DB: "testdb",
-  dialect: "postgres",
+  HOST: host,
+  USER: credentials,
+  PASSWORD: credentials,
+  PORT: port,
+  DB: db,
+  dialect: dialect,
   pool: {
     max: 5,
     min: 0,
@@ -12,4 +17,3 @@ module.exports = {
     idle: 10000
   }
 };
- 
