@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server.js",
     "prebuild": "npm install",
-    "build": "echo 'No build step required for this project.'",
+    "build": "node server.js",
     "test": "jest"
   },
   "keywords": [
