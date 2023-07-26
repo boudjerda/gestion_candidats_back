@@ -1,10 +1,10 @@
 module.exports = {
-  HOST: "ec2-54-73-22-169.eu-west-1.compute.amazonaws.com",
-  USER: "nynokspbxqgadj",
-  PASSWORD: "45a184395e084e52ea9c5ffcdc47658ff641cb4b7985291eee6f8c521386667c",
-  PORT: 5432,
-  DB: "dcv8sb5eb0u51e",
-  dialect: "postgres",
+  HOST: process.env.HOST,
+  USER: process.env.USER,
+  PASSWORD:process.env.PASSWORD ,
+  PORT:process.env.PORT,
+  DB: process.env.DB,
+  dialect: process.env.dialect,
   pool: {
     max: 5,
     min: 0,
@@ -12,5 +12,4 @@ module.exports = {
     idle: 10000
   }
 };
-
  
