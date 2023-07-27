@@ -6,11 +6,7 @@ const app = express();
 require('dotenv').config();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-var corsOptions = {
-  origin: "http://localhost:3000"
-};
 
-app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(express.json());  /* bodyParser.json() is deprecated */
