@@ -6,7 +6,11 @@ const app = express();
 require('dotenv').config();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+var corsOptions = {
+  origin: "https://marvelous-kheer-efe13f.netlify.app/"
+};
 
+app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(express.json());  /* bodyParser.json() is deprecated */
