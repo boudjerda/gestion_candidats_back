@@ -7,7 +7,7 @@ require('dotenv').config();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 var corsOptions = {
-  origin: "https://marvelous-kheer-efe13f.netlify.app/"
+  origin: "*"
 };
 
 app.use(cors(corsOptions));
